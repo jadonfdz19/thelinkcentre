@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Link Centre</title>
+
+    <style>
+        body {
+            text-align: left;
+            background-color: lightblue;
+            color: red;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            background-color: yellow;
+            color: orange;
+            font-size: 13px;
+            padding: 7px 14px;
+            font-family: Arial, sans-serif;
+            border: 1px solid orange;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        a {
+            color: blue;
+            font-size: 16px;
+        }
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background-color: red;
+    color: white;
+    white-space: nowrap;
+}
+
+.marquee span {
+    display: inline-block;
+    transform: translateX(-100%);
+    animation: scrollRight 10s linear infinite;
+}
+
+@keyframes scrollRight {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+    </style>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeString = now.toLocaleString();
+
+            document.getElementById("datetime").innerHTML = dateTimeString;
+        }
+
+        // Update every second
+        setInterval(updateDateTime, 1000);
+    </script>
+
+</head>
+
+<body onload="updateDateTime()">
+
+    <h4>Current Date and Time:</h4>
+
+    <p id="datetime"></p>
+
+<div class="marquee">
+    <span>Use the given links to find the website you might be looking for.</span>
+</div>
+
+      <br>
+
+    <h1>Sites Created by Me:</h1>
+
+    <a href="https://jadonfdz19.github.io/The-INTERNET/">
+        <button>The Internet</button>
+    </a>
+
+    <a href="https://jadonfdz19.github.io/AvenueOfSaints/">
+        <button>The Friends of the Saints</button>
+    </a>
+
+    <a href="https://jadonfdz19.github.io/TheChat_Hub/">
+        <button>The Chat Hub</button>
+    </a>
+
+    <h1>Other Useful Sites (Not Created by Me):</h1>
+
+    <a href="https://www.youtube.com">YouTube</a><br>
+    <a href="https://www.hotstar.com">Hotstar</a><br>
+    <a href="https://www.netflix.com">Netflix</a><br>
+    <a href="https://www.whatsapp.com">WhatsApp</a><br>
+    <a href="https://www.instagram.com">Instagram</a><br>
+    <a href="https://www.facebook.com">Facebook</a><br>
+    <a href="https://www.yahoo.com">Yahoo</a><br>
+    <a href="https://www.bing.com">Bing</a><br>
+    <a href="https://www.firefox.com">Firefox</a><br>
+    <a href="https://www.google.com">Google</a><br>
+    <a href="https://chatgpt.com">ChatGPT</a>
+
+</body>
+
+</html>
